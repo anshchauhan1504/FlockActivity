@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+<body style="background-color:#fcbad3;">
+    <h2 style="text-align: center;">Web Development Task</h2>
+    <p style="background-color:cornflowerblue;">Registration Number : 20BCE11014<br>
+        Name : Subhransu Majhi</p>
+    <center><h3><u>FORM</u></h3></center>
+    <form>
+        <label>Name :</label>
+        <input type="text";><br>
+        <label>Gender</label> <br>
+        <input type="radio", name="gender">Male <br>
+        <input type="radio", name="gender">Female <br>
+        <input type="radio", name="gender">Other<br>
+        <label>e-mail : </label>
+        <input type="email"><br>
+        <label>Password : </label>
+        <input type="password"><br>
+        <label>Interests:</label><br>
+        <input type="checkbox">Web Development <br>
+        <input type="checkbox">IoT <br>
+        <input type="checkbox">App Development <br>
+        <input type="checkbox">Cyber Security <br>
+        <input type="checkbox">Machine Learning <br>
+        <center><button type="reset">Reset</button> <button type="submit" onclick="sub()" id="submit">Submit</button></center>
+    </form><br><hr color="black"><br>
+    <center><h3><I>GUESS THE NUMBER GAME!</I></h3>
+    <p>Try to guess the number as fast as you can</p>
+    <button type="button" onclick="game()" id="start">Start Game!</button></center>
+
+    <script>
+        function sub(){
+        document.getElementById("submit");
+        alert("Form submitted successfully");
+        }
+        function game(){
+            document.getElementById("start");
+            const rnd = Math.floor((Math.random()*10))+1;
+            let n = parseInt(prompt("Enter your Guess from 1 to 10"));
+            while (n != rnd) {
+                if (n < rnd) {
+                    alert("Enter a greater number");
+                }
+                else if (n > rnd) {
+                    alert("Enter a smaller number");
+                }
+                n = parseInt(prompt("Enter your Guess from 1 to 10"));
+            }
+            alert("You guessed the number!!!");
+        }
+    </script>
+</body>
+</html>
